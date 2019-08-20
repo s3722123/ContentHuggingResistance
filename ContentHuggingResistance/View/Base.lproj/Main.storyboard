@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ContentHuggingResistance" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harry Potter Flying Over Hogwarts" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtc-HP-wex">
+                                <rect key="frame" x="16" y="30" width="141" height="68.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="Daniel Radcliffe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6d9-hy-vMV">
+                                <rect key="frame" x="16" y="106.5" width="141.5" height="21"/>
+                                <color key="backgroundColor" red="0.79983181423611116" green="0.79983181423611116" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLy-2t-Fky">
+                                <rect key="frame" x="220" y="148" width="139" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title=" Buy ">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="harry_potter_1" translatesAutoresizingMaskIntoConstraints="NO" id="zYT-3S-jhl">
+                                <rect key="frame" x="165" y="28" width="194" height="112"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zYT-3S-jhl" secondAttribute="height" multiplier="163:94" id="Ubk-bS-ABe"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vh5-sh-y1m">
+                                <rect key="frame" x="16" y="190" width="343" height="469"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">I have set constraints here to layout out all the elements on the screen.
+
+If I also set  the width and height of the image, then autolayout will have all the information it needs to layout the screen.
+
+However, using a fixed height and width will not allow the layout to change to change in the screen orientation.
+
+As an alternative, I can set content hugging or resistance priorities.  1.) Daniel Radcliffe label set Content Resitance Horizontal to 751  (don't resist growing)
+
+2.) Set Horizontal spacing between buttons to 5pt.
+
+3.) Wish button to have 251 for horizontal hugging. (resist growing).  Supports dynamic text.  4.) OR Buy button to have 251 for horizontal hugging. (resist growing) </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAg-xz-VxK">
+                                <rect key="frame" x="165" y="148" width="50" height="34"/>
+                                <color key="backgroundColor" red="0.20000000300000001" green="0.60000002379999995" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title=" Wish ">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AGk-Eb-rZf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XLy-2t-Fky" firstAttribute="trailing" secondItem="zYT-3S-jhl" secondAttribute="trailing" id="5rg-9e-8l7"/>
+                            <constraint firstItem="vh5-sh-y1m" firstAttribute="top" secondItem="oAg-xz-VxK" secondAttribute="bottom" constant="8" id="6qf-zS-qNf"/>
+                            <constraint firstItem="Rtc-HP-wex" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="DUR-hP-je2"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Rtc-HP-wex" secondAttribute="leading" id="Dix-Cl-IR6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vh5-sh-y1m" secondAttribute="bottom" constant="8" id="MPh-6F-0xr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vh5-sh-y1m" secondAttribute="trailing" id="PGE-P1-nQm"/>
+                            <constraint firstItem="6d9-hy-vMV" firstAttribute="top" secondItem="Rtc-HP-wex" secondAttribute="bottom" constant="8" id="V9y-NA-J9N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zYT-3S-jhl" secondAttribute="trailing" id="XMH-ws-0oK"/>
+                            <constraint firstItem="oAg-xz-VxK" firstAttribute="top" secondItem="zYT-3S-jhl" secondAttribute="bottom" constant="8" id="bYe-4P-JdY"/>
+                            <constraint firstItem="XLy-2t-Fky" firstAttribute="leading" secondItem="oAg-xz-VxK" secondAttribute="trailing" constant="5" id="buJ-HB-Z8r"/>
+                            <constraint firstItem="zYT-3S-jhl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="dIF-xT-IGN"/>
+                            <constraint firstItem="oAg-xz-VxK" firstAttribute="leading" secondItem="zYT-3S-jhl" secondAttribute="leading" id="eBQ-2k-U7c"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="6d9-hy-vMV" secondAttribute="leading" id="fAO-No-DD7"/>
+                            <constraint firstItem="zYT-3S-jhl" firstAttribute="leading" secondItem="6d9-hy-vMV" secondAttribute="trailing" constant="7.5" id="hZW-Ph-djx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="vh5-sh-y1m" secondAttribute="leading" id="heH-c4-Ncf"/>
+                            <constraint firstItem="XLy-2t-Fky" firstAttribute="top" secondItem="zYT-3S-jhl" secondAttribute="bottom" constant="8" id="rr9-Ah-Yv7"/>
+                            <constraint firstItem="zYT-3S-jhl" firstAttribute="leading" secondItem="Rtc-HP-wex" secondAttribute="trailing" constant="8" id="uNJ-Mc-9FR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.375" y="21.12676056338028"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="harry_potter_1" width="180" height="112.80000305175781"/>
+    </resources>
+</document>
